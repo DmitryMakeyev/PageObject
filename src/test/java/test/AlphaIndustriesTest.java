@@ -13,6 +13,7 @@ import page.AlphaIndustriesPages.AlphaIndustriesHomePagePF;
 
 public class AlphaIndustriesTest {
     private WebDriver driver;
+    private String QuantityOfGoodsValue;
 
     @BeforeMethod(alwaysRun = true)
     public void BrowserSetup(){
@@ -33,6 +34,20 @@ public class AlphaIndustriesTest {
                 .addProductToCart()
                 .countItemsInCart();
         Assert.assertTrue(ExpectedNumberOfItemsInCart>0,"The item is not in the cart");
+    }
+
+    @Test
+    public void ExpectedQuantityOfGoods() throws InterruptedException {
+        QuantityOfGoodsValue = "2";
+        String ExpectedQuantityOfGoods = new AlphaIndustriesHomePagePF(driver)
+                .openPage()
+                .openSearch()
+                .searchForProducts("mjm21000c1")
+                .selectProduct()
+                .addProductToCart()
+                .increaseQuantityOfGoods(QuantityOfGoodsValue)
+                .countQuantityOfGoods();
+        Assert.assertEquals(QuantityOfGoodsValue, ExpectedQuantityOfGoods);
     }
 
     @AfterMethod(alwaysRun = true)
