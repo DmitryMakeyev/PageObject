@@ -37,7 +37,7 @@ public class AlphaIndustriesTest {
     }
 
     @Test
-    public void ExpectedQuantityOfGoods() throws InterruptedException {
+    public void IncreaseQuantityOfGoods() throws InterruptedException {
         QuantityOfGoodsValue = "2";
         String ExpectedQuantityOfGoods = new AlphaIndustriesHomePagePF(driver)
                 .openPage()
