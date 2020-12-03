@@ -1,14 +1,9 @@
-package page;
-
+package page.AlphaIndustriesPages;
+import page.AbstractPage;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-
-public class AlphaIndustriesHomePagePF extends AbstractPage{
+public class AlphaIndustriesHomePagePF extends AbstractPage {
     private static final String HOMEPAGE_URL = "https://www.alphaindustries.com/";
 
     @FindBy(id = "geCloseBtn")

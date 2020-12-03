@@ -1,12 +1,11 @@
-package page;
-
+package page.AlphaIndustriesPages;
+import page.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 
-public class AlphaIndustriesCartPage extends AbstractPage{
+public class AlphaIndustriesCartPage extends AbstractPage {
     @FindBy(xpath = "//*[@id='shopify-section-cart-template']/div/form/table/tbody/tr")
     List<WebElement> itemsInCart;
 
